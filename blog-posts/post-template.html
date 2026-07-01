@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Template</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    
+
+    <main class="post-wrapper">
+        <a href="/index.html" class="nav-link">&larr; Return Home</a>
+        
+        <article>
+            <script id="markdown-source" type="text/plain">
+<!-- Insert markdown below -->
+
+<!-- Insert markdown above -->
+            </script>
+
+            <h1 id="rendered-title" class="post-title"></h1>
+            <div id="rendered-content" class="post-content post-meta"></div>
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const markdownText = document.getElementById('markdown-source').textContent;
+            const htmlContent = marked.parse(markdownText);
+            document.getElementById('rendered-content').innerHTML = htmlContent;
+        });
+    </script>
+</body>
+</html>

@@ -1,10 +1,68 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-        <title>Test Page Title</title> 
-    </head> 
-    <body>
-        <h1>My First Heading</h1> 
-        <p>My first paragraph.</p>
-    </body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/common.js"></script>
+
+</head>
+<body>
+    
+    <div class="main-content">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-photo">
+                    <img src="/assets/profile.png" alt="Profile Photo">
+                </div>
+                
+                <h2 class="profile-name">Michael Kent</h2>
+                
+                <p class="profile-bio">
+                    Computer Science and Sociology student at the University of Virginia. 
+                    President of the Computer & Network Security Club. 
+                    National CCDC Competitor.
+                </p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/michael-k-006147412/" class="social-link" title="LinkedIn">
+                        <img src="/assets/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://uvacns.com" class="social-link" title="Website">
+                        <svg width="24" height="24" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#e57200" d="M1344 960v-640h-448v1137q119-63 213-137 235-184 235-360zm192-768v768q0 86-33.5 170.5t-83 150-118 127.5-126.5 103-121 77.5-89.5 49.5-42.5 20q-12 6-26 6t-26-6q-16-7-42.5-20t-89.5-49.5-121-77.5-126.5-103-118-127.5-83-150-33.5-170.5v-768q0-26 19-45t45-19h1152q26 0 45 19t19 45z"/></svg>
+                    </a>
+                    <a href="https://github.com/git-michaelkent" class="social-link" title="GitHub">
+                        <img src="/assets/Github-Logo-PNG-Photo.png" alt="Github">
+                    </a>
+                    <a href="https://app.hackthebox.com/users/3571278" class="social-link" title="Hack The Box">
+                        <img src="/assets/HTB.png" alt="HTB">
+                    </a>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="posts-container">
+            <section class="posts-section">
+                <div class="posts-grid">
+
+                    <article class="post-card">
+                        <a href="/blog-posts/flock.html" style="color: #000000; text-decoration:none">
+                            <div class="card-image">
+                                <img src="/assets/flock-thumbnail.jpg" style="height: 100%;" alt="Placeholder">
+                            </div>
+                            <div class="card-content">
+                                <h3>Video: Flock and Private Surveillance</h3>
+                                <p style="color: rgb(138, 138, 138);">March 28 2026</p>
+                                <p>Video essay made for a class project.</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
 </html>
