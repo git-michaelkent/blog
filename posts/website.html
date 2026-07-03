@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: This Website</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+
+    <main class="post-wrapper">
+        <a href="/index.html" class="nav-link">&larr; Return Home</a>
+
+        <article>
+            <script id="markdown-source" type="text/plain">
+<!-- Insert markdown below -->
+# Project: This Website
+https://github.com/git-michaelkent/git-michaelkent.github.io
+
+### About
+Welcome to my website! While backpacking in New Zealand, I met a lot of incredible people in the local Cybersecurity industry. One common recommendation I received was to create a personal blog/website - so here it is!
+
+### Background
+About four years ago I took a web design course. In this class we made some simple static pages and hosted them on Github. I found websites initially quite intimidating, but I felt incredibly empowered by the end of the course. HTML and CSS was far simpler than I had imagined, and I really enjoyed the design process.
+
+This last semester, I took a course called Software Development Essentials. The course's primary focus was learning how to effectively maintain a complex and long running codebase between a group of people. My team's project started as a simple CLI based program, but by the end of the semester the feature requirements quickly ballooned. Off the top of my head, the final program included a SQLite database, a dynamic website, account management, event logging, security hardening, our own encryption/storage solution for credentials (required to be a simple cipher), and it was all written in Java. Despite the immense difficulties and pressure, our team finished the class with a 108% overall. I learned a ton in this class, and specifically for this project, I gained far more confidence in website design.
+
+### Platform
+When I was deciding a platform to host this website, returning to Github Pages felt like the best choice. Platforms like Wix or Google Websites were immediately crossed out, as they sacrifice far too much control and ownership for my taste. I did consider self hosting (and I may return to this at some point), but I do not currently have my own infrastructure or domain to support this. Github Pages strikes a good balance between the two. It's free, gives a lot of control, I don't need to personally host it, and I can easily port the code if I seek to eventually host it myself.
+
+### Licensing
+For the source code of my website, I chose GPLv3 because I strongly believe in Copyleft law. While it's not very likely, I don't mind if any of my designs are reused, so long as it is in a open manner and with attribution. Open source software has become the backbone of the modern world, and I hope one day all software will be free and open source.
+
+For my content, I have chosen CC BY-NC 4.0. Similarly to my code, I believe in the open usage of content. That being said, I do not want my content to be used for commercial purposes.
+
+### Design
+I was initially looking into using Jekyll for my website. It directly integrates with Github Pages, allows me to use Markdown for my blog posts, there are tons of Jekyll templates to use as a starting point, and it generally helps with automation. However, after playing around with a forked template website, I found it to be a bit overwhelming - especially for my needs. I ultimately scrapped the forked repo and decided to build my website from scratch*. 
+
+For the styling of my website, I drew influence from Jekyll templates I liked. In particular, I really liked [Mr. Green's Jekyll Theme](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme). I thought the layout was really solid, I liked the rounded floating boxes, and I loved the tactile feeling some of the buttons carried (especially the social links). 
+
+For the technicalities, the first issue I needed to solve was using markdown for my blog posts. For this I decided to use [Marked](https://marked.js.org/) through [JS delivr](https://www.jsdelivr.com/), which allows me to put my Markdown blog text directly into the HTML of my post. 
+
+This approach however created a second issue: uniformity. Since each post is a completely new html page, if I ever wanted to update my header or footer I would have to go to *every* post to do so. To more centrally control these aspects, I added a script to my template post page that automatically adds the footer/header as defined in `common.js`.
+
+I also did some of the usual house cleaning things, like having a CSS stylesheet for every page to reference. But other than that, this brings us to today. While it's not perfect, I think it is a good starting point and I'm excited to keep working on it!
+
+###### * AI (Lumo 2.0 Max) was utilized, but was limited to research, debugging, and specific code snippets.
+
+
+<!-- Insert markdown above -->
+            </script>
+
+            <h1 id="rendered-title" class="post-title"></h1>
+            <div id="rendered-content" class="post-content post-meta"></div>
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const markdownText = document.getElementById('markdown-source').textContent;
+            const htmlContent = marked.parse(markdownText);
+            document.getElementById('rendered-content').innerHTML = htmlContent;
+        });
+    </script>
+</body>
+
+</html>
