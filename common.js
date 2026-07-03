@@ -10,7 +10,13 @@ const footerHTML = `
         <div class="footer">
             <span><a href="mailto:ft2fxeeq@4wrd.cc"><img src="/assets/email.png" alt=""></a></span>
             <span>|</span>
-            <span>Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a></span>
+            <details>
+                <summary>GPLv3 / CC BY-NC 4.0</summary>
+                The website's software is released under the GNU GPLv3. 
+                Any company logos/icons are owned by their respective corporations.
+                Unless otherwise stated, all text, images, audio, video, logos, and other 
+                creative content on this site are licensed under CC BY-NC 4.0
+            </details>
             <span>|</span>
             <details>
                 <summary>Attributions</summary>
